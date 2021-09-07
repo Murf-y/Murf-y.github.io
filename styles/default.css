@@ -105,8 +105,26 @@ textarea {
     min-height: 10em;
     text-align: center;
     align-content: center;
+    
 }
+#greeting-title {
+    overflow: hidden; 
+    border-right: .15em solid var(--border-color); 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: auto;
+    font-size: 5vw;
+    animation: typing 3.5s steps(40, end),blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
 
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--border-color); }
+  }
 .intro-wrapper {
     background-color: var(--secondary-color);
     border: 1px solid var(--border-color);
